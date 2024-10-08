@@ -41,6 +41,10 @@ app.get('/users', (request, response) => {
     return response.json(users);
 });
 
+app.get("/", (req, res) => {
+    res.send("API de criação de usuários está rodando!");
+  });
+
 // Rota POST para criar um novo usuário
 app.post('/users', (request, response) => {
     const { name, age } = request.body;
